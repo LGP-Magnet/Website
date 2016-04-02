@@ -712,6 +712,10 @@ footer h6 {
   color: #fff;
 }
 
+#home > .container{
+	background-color:#fff;
+}
+
     /* ==========================================================================
 Media Queries Style
 ========================================================================== */
@@ -841,8 +845,8 @@ Media Queries Style
 }
 
 .menu img.logo {
-	margin: 20px 0;
-	max-width: 160px;
+    width: 100%;
+    height: auto;
 }
 
 .menu a {
