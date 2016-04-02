@@ -498,6 +498,12 @@ Portfolio Style
   opacity: 1;
 }
 
+#ourTeam > .container{
+	padding-right: 10%;
+    padding-left: 10%;
+	background-color:#fff;
+}
+
     /* ==========================================================================
 Work Process Style
 ========================================================================== */
@@ -521,6 +527,7 @@ Work Process Style
 #projects > .container{
 	padding-right: 6%;
     padding-left: 6%;
+	background-color:#fff;
 }
 
     /* ==========================================================================
@@ -717,8 +724,11 @@ footer h6 {
   color: #fff;
 }
 
-#home > .container{
-	background-color:#fff;
+#home > .container {
+    background-color: #fff;
+    padding-right: 0;
+    padding-left: 0;
+    padding: 0;
 }
 
     /* ==========================================================================
@@ -996,12 +1006,33 @@ padding-right: 20%;
 	margin-top: 8%;
 }
 
-.project {    
-   margin: 2%;
-    border-radius: 4vw;
+.project {
+    margin: 2%;
     padding: 20px;
+    min-height: 40vw;
+	display:table;
+}
 
-} 
+.project > div {
+    display:table-cell;
+	vertical-align:middle;
+}
+
+.projectUP{
+	border-top-left-radius: 6em;
+    border-bottom-right-radius: 6em;
+	border-top-right-radius: 2em;
+    border-bottom-left-radius: 2em;
+}
+
+.projectDOWN{
+	border-top-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+	border-top-right-radius: 6em;
+    border-bottom-left-radius: 6em;
+	margin-top: 3em;
+}
+
 
 .project p{
 	color:#fff;
@@ -1021,4 +1052,38 @@ padding-right: 20%;
 
 #TeamD{
 	background-color: #5F6B75;
+}
+
+.orange-circle-button {
+    margin: 40px;
+    height: 20em;
+    width: 20em;
+    position: relative;
+    border: 0;
+    padding: 0;
+}
+.orange-circle-button:hover {
+	background-color:#fff;
+	
+}
+.orange-circle-button:visited {
+	background-color:#fff;
+	
+}
+
+.blueCircle{
+	background: url("../img/team/foto.png") no-repeat center;
+    background-size: cover;
+}
+
+.blueCircle > div{
+	background-color:#56D0D5;
+	border-radius: 50%;
+	opacity:0.93;
+    width: 101%;
+    height: 101%;
+}
+
+.blueCircle > div:hover {
+	opacity:0;
 }
