@@ -4,10 +4,15 @@ Global Styles
 ========================================================================== */
 body {
   /*font-family: 'Open Sans', sans-serif;*/
-  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+  font-family: 'Lato Regular';
   font-size: 16px;
   color: #0d0d0d;
   overflow-x: hidden;
+}
+
+@font-face {
+	font-family: 'Lato Regular';
+	src:url('../fonts/Lato_font/Lato-Regular.ttf');
 }
 
 .sep {
