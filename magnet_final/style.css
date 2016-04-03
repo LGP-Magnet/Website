@@ -8,7 +8,7 @@ html *{
 }
 
 .skew{
-	z-index: -1;
+	/* z-index: -1; */
 	-webkit-transform: skewY(-4deg);
 	-moz-transform: skewY(-4deg);
 	-ms-transform: skewY(-4deg);
