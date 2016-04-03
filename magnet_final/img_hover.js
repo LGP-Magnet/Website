@@ -34,12 +34,12 @@ $(document).ready(function(){
 		$(btn).on("mouseenter", function() {
 			console.log('hover');
 			$(this).addClass('shown');
-			$(".img-overlay", this).show(300);
+			$(".img-overlay", this).hide(300);
 		});
 		$(btn).on("mouseleave", function() {
 			console.log('hover out');
 			$(this).removeClass('shown');
-			$(".img-overlay", this).hide(300);
+			$(".img-overlay", this).show(300);
 		});
 		
 		var imgOverlayDiv = document.createElement("DIV");
