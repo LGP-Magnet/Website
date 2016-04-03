@@ -39,6 +39,7 @@ html *{
 #first{
 	background: #EDEDED;
 	color: white;
+	z-index: 9999;
 }
 
 .company-description-container{
@@ -480,11 +481,12 @@ position: absolute;
 }
 
 .videoLogo{
-width: 75%;
+    width: 60%;
     height: auto;
     display: table-cell;
     vertical-align: middle;
-    margin-left: 12.5%;
+    margin-left: 20%;
+    margin-top: 15%;
 }
 
 h3 {
