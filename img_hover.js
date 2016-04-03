@@ -32,12 +32,10 @@ $(document).ready(function(){
 		$(btn).attr("style", "background: url(" + teamDir + team[i] + ") no-repeat center;background-size: cover;");
 
 		$(btn).on("mouseenter", function() {
-			console.log('hover');
 			$(this).addClass('shown');
 			$(".img-overlay", this).hide(300);
 		});
 		$(btn).on("mouseleave", function() {
-			console.log('hover out');
 			$(this).removeClass('shown');
 			$(".img-overlay", this).show(300);
 		});
@@ -50,6 +48,12 @@ $(document).ready(function(){
 	}
 	
 	$('#menuToggle, .menu-close').on('click', function(){
+		$('#menuToggle').toggleClass('active');
+		$('body').toggleClass('body-push-toleft');
+		$('#theMenu').toggleClass('menu-open');
+	});
+	
+	$('.menu-wrap > a').on('click', function(){
 		$('#menuToggle').toggleClass('active');
 		$('body').toggleClass('body-push-toleft');
 		$('#theMenu').toggleClass('menu-open');
