@@ -1,0 +1,253 @@
+@font-face {
+    font-family: "magnet-lato";
+    src: url(Lato_font/Lato-Regular.ttf) format("truetype");
+}
+
+html *{
+	font-family: "magnet-lato";
+}
+
+.skew{
+	z-index: -1;
+	-webkit-transform: skewY(-4deg);
+	-moz-transform: skewY(-4deg);
+	-ms-transform: skewY(-4deg);
+	-o-transform: skewY(-4deg);
+	transform: skewY(-4deg);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: initial;
+	padding-bottom: 100px;
+	padding-top: 30px;
+}
+
+.skew-content{
+	padding-top: 50px;
+   -webkit-transform: skewY(4deg) !important;
+   -moz-transform: skewY(4deg) !important;
+   -o-transform: skewY(4deg) !important;
+   transform: skewY(4deg) !important;
+}
+
+#top{
+	height: 110vh;
+}
+#main-logo-container{
+	/*height:100vh;*/
+	/*position: relative;
+	width: 100%;*/
+}
+#first{
+	background: #87cfd4;
+	color: white;
+}
+
+.company-description-container{
+	font-size: 2rem;
+}
+
+.section-title{
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 50px;
+}
+
+#second{
+	background: #ffffff;
+}
+
+
+.overlay-container{
+	position: relative; 
+	padding: 15px;
+}
+
+.overlay-container .img-overlay{
+	display: none;
+	background-color: rgba(135,199,212,0.85);
+}
+
+.overlay-container .img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(135,199,212,0.85);
+    color: #fff;
+    
+}
+
+.vertical-center-outer {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.vertical-center-middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.vertical-center-inner {
+    margin-left: auto;
+    margin-right: auto; 
+    width: 100%;
+}
+
+
+.team-role{
+	text-align: center;
+}
+
+
+
+.team-description-container{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.team-description-container p{
+	color: #fff;
+	text-align: center;
+}
+
+#company-skew-1{
+	position: relative;
+	background-color: #f4a894;
+}
+
+#company-skew-1:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -28px;
+    display: block;
+    width: 55px;
+    background: #f4a894;
+    -webkit-transform: skewX(3deg);
+    -moz-transform: skewX(3deg);
+    -ms-transform: skewX(3deg);
+    -o-transform: skewX(3deg);
+    transform: skewX(3deg);
+}
+
+
+#company-skew-2{
+	position: relative;
+	background-color: #a3767c;
+}
+@media screen and (min-width: 992px) {
+    #company-skew-2 {
+        top: 60px;
+    }
+}
+
+#company-skew-2:before {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -28px;
+    display: block;
+    width: 55px;
+    background: #a3767c;
+    -webkit-transform: skewX(3deg);
+    -moz-transform: skewX(3deg);
+    -ms-transform: skewX(3deg);
+    -o-transform: skewX(3deg);
+    transform: skewX(3deg);
+}
+
+#company-skew-2:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -28px;
+    display: block;
+    width: 55px;
+    background: #a3767c;
+    -webkit-transform: skewX(-3deg);
+    -moz-transform: skewX(-3deg);
+    -ms-transform: skewX(-3deg);
+    -o-transform: skewX(-3deg);
+    transform: skewX(-3deg);
+}
+
+#company-skew-3{
+	position: relative;
+	background-color: #ffd17b;
+}
+
+#company-skew-3:before {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -28px;
+    display: block;
+    width: 55px;
+    background: #ffd17b;
+    -webkit-transform: skewX(-3deg);
+    -moz-transform: skewX(-3deg);
+    -ms-transform: skewX(-3deg);
+    -o-transform: skewX(-3deg);
+    transform: skewX(-3deg);
+}
+
+#company-skew-3:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -28px;
+    display: block;
+    width: 55px;
+    background: #ffd17b;
+    -webkit-transform: skewX(3deg);
+    -moz-transform: skewX(3deg);
+    -ms-transform: skewX(3deg);
+    -o-transform: skewX(3deg);
+    transform: skewX(3deg);
+}
+
+#company-skew-4{
+	position: relative;
+	background-color: #5f6b75;
+}
+
+#company-skew-4:before {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -28px;
+    display: block;
+    width: 55px;
+    background: #5f6b75;
+    -webkit-transform: skewX(3deg);
+    -moz-transform: skewX(3deg);
+    -ms-transform: skewX(3deg);
+    -o-transform: skewX(3deg);
+    transform: skewX(3deg);
+}
+
+
+
+#third{
+	background: #404041;
+	color: white;
+}
+
+#third p{
+	text-align: center;
+}
