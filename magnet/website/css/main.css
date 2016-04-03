@@ -40,7 +40,7 @@ h1 {
 }
 
 h2 {
-  font-size: 5vw;
+  font-size: 3.5vw;
   color: #000;
   font-weight: 400;
   letter-spacing: 0.05em;
@@ -75,6 +75,10 @@ p {
   font-size: 1.2vw;
   color: #000;
   font-weight: 400;
+}
+
+.bigP{
+	margin: 0 0 50px;
 }
 
 /* ==========================================================================
@@ -370,13 +374,13 @@ Services Style
     text-align: justify;
 }
 #apresentation h2 {
-    color: #4B4B4B;
+    color: #434343;
     font-weight: bold;
 	    text-align: center;
 }
 }
 #apresentation p {
-	color: #4B4B4B;
+	color: #434343;
   text-align: justify;
 }
 #apresentation p:last-child{
@@ -386,7 +390,7 @@ Services Style
 }
 #apresentation p > span {
   font-weight:bold;
-  color: #4B4B4B;
+  color: #434343;
 }
 .titleP{
 	margin: 0 0 2px;
@@ -394,7 +398,7 @@ Services Style
 
 .descMagnet{
 	margin: 0 0 20px;
-	color: #4B4B4B;
+	color: #434343;
     font-weight: bold;
     text-align: center;
 }
@@ -833,14 +837,15 @@ Media Queries Style
 
 .menu.menu-open {
 	right: 0px;
+	    width: 25%;
 }
 
 .menu-wrap {
 	position: absolute;
 	top: 0;
 	left: 60px;
-	background: #1a1a1a;
-	width: 200px;
+    background: rgba(0,0,0,0.8);
+	width: 100%;
 	height: 100%;
 }
 
@@ -865,14 +870,14 @@ Media Queries Style
 }
 
 .menu a {
-	margin-left: 20px;
-	color: #808080;
-	display: block;
-	font-size: 12px;
-	font-weight: 700;
-	line-height: 40px;
-	letter-spacing: 0.1em;
-	text-transform: uppercase;
+    margin-left: 20px;
+    color: #808080;
+    display: block;
+    font-size: 1vw;
+    font-weight: 700;
+    line-height: 2vw;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
 }
 
 .menu a:hover {
@@ -946,25 +951,33 @@ Media Queries Style
 }
 
 #menuToggle {
-	position: absolute;
-	top: 20px;
-	left: 0;
-	z-index: 11;
-	display: block;
-	text-align: center;
-	font-size: 14px;
-	color: #ffffff;
-	width: 40px;
-	height: 40px;
-	line-height: 40px;
-	cursor: pointer;
-	background: rgba(0,0,0,0.25);
-	-webkit-transition: all .1s ease-in-out;
-	   -moz-transition: all .1s ease-in-out;
-		-ms-transition: all .1s ease-in-out;
-		 -o-transition: all .1s ease-in-out;
-			transition: all .1s ease-in-out;
+position: absolute;
+    top: 20px;
+    left: -35px;
+    z-index: 11;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #ffffff;
+	width: 30%;
+	    max-width: 90px;
+    height: 8%;
+    line-height: 40px;
+    cursor: pointer;
+    background: rgba(0,0,0,0.25);
+    -webkit-transition: all .1s ease-in-out;
+    -moz-transition: all .1s ease-in-out;
+    -ms-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+	    display: table;
 }
+
+#menuToggle > i{
+	display:table-cell;
+	vertical-align:middle;
+}
+
 
 #menuToggle:hover {
 	color: #ffffff;
