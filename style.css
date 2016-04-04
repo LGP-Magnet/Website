@@ -271,60 +271,92 @@ body {
 	margin-top: 5%;
 }
 
-.orange-circle-button {
-    margin: 20px;
-	margin-left: 10px;
-	margin-right: 10px;
-    height: 10em;
-    width: 10em;
-    position: relative;
-    border: 0;
-    padding: 0;
-}
-
-.orange-circle-button.mouse-hover {
-	
-}
-
-
+/*********** Team Members ***********/
 #teamImg {
 	text-align: center;
 }
 
-button:focus {
-	outline:0 !important;
+#teamImg .col {
+	text-align: center;
+}
+
+#teamImg .col:focus {
+	outline: none !important;
 	box-shadow: none !important;
 }
 
-button {
+#teamImg .col {
 	box-shadow: none !important;
+	background-color: transparent;
+	padding: 0;
+	margin: auto;
+	margin-bottom: 2em;
 }
 
-.orange-circle-button:hover {
-	background-color:#fff;
-	
-}
-.orange-circle-button:visited {
-	background-color:#fff;
-	
-}
-
-.blueCircle{
+.team-member-button {
+	width: 150px;
+	height: 150px;
+	padding: 0;
+	margin: 0;
+	outline: none !important;
 	background: url("../img/team/foto.png") no-repeat center;
-    background-size: cover;
-}
-
-.blueCircle > div{
-	background-color:#A9A9A9;
+	background-color: rgba(169, 169, 169, 0.93);
+    background-size: 100% 100%;
 	border-radius: 50%;
-	opacity:0.93;
-    width: 101%;
-    height: 101%;
+	border: 0;
 }
 
-.hoverImage:hover {
-	background-color:rgba(169,169,169,0);
-	-moz-backface-visibility: hidden;
+.team-member-overlay {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border: 0;
+	border-radius: 50%;
+    padding: 0;
+    background-size: cover;
+	background-color: transparent;
+	padding-top: 22%;
+	
+	-webkit-transition: background-color .3s ease;
+    -moz-transition: background-color .3s ease;
+    -ms-transition: background-color .3s ease;
+    -o-transition: background-color .3s ease;
+    transition: background-color .3s ease;
+}
+
+.team-member-overlay.mouse-hover {
+	background-color: rgba(169, 169, 169, 0.93);
+}
+
+.team-member-overlay > p {
+	color: transparent;
+	display: block;
+	margin: 0;
+	padding: 0;
+	padding-bottom: 0.5em;
+}
+
+.team-member-overlay.mouse-hover > p {
+	color: #434343;
+	
+	-webkit-transition: color .5s ease;
+    -moz-transition: color .5s ease;
+    -ms-transition: color .5s ease;
+    -o-transition: color .5s ease;
+    transition: color .5s ease;
+}
+
+.team-member-overlay > p.member-name {
+	font-size: 1.5em;
+	font-weight: 600;
+}
+
+.team-member-overlay > p.member-team {
+	font-size: 0.8em;
+}
+
+.team-member-overlay > p.member-position {
+	font-size: 0.8em;
 }
 
 /*********** Sidebar ***********/
@@ -421,7 +453,7 @@ button {
     -ms-transition: all .1s ease-in-out;
     -o-transition: all .1s ease-in-out;
     transition: all .1s ease-in-out;
-	    display: table;
+	display: table;
 }
 
 #sidebar-toggle > i {

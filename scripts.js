@@ -18,34 +18,64 @@ function CreateTeamMemberBtns() {
 	"31_RaquelCorreia.gif", "32_RitaLima.gif", "33_DanielCouceiro.gif", "34_JoaoFernandes.gif"];
 	
 	$.each(team, function(index, gif) {
-		var btn = document.createElement("BUTTON");
-		$(btn).attr("type", "button");
-		$(btn).attr("class", "hover-container btn btn-default orange-circle-button blueCircle");
-		$(btn).attr("style", "background: url(./img/team/" + gif + ") no-repeat center;background-size: cover;");
+		var div = $(document.createElement('DIV'));
+		div.attr('class', 'col col-md-2 col-sm-3 col-xs-4');
+		
+		var btn = $(document.createElement("BUTTON"));
+		btn.attr('type', 'button');
+		btn.attr("class", "team-member-button");
+		btn.attr("style", "background: url(./img/team/" + gif + ") no-repeat center;");
 
-		var overlay = document.createElement("DIV");
-		$(overlay).attr("class","img-overlay hoverImage");
+		var overlay = $(document.createElement("DIV"));
+		overlay.attr("class","team-member-overlay");
+		
+		var name = $(document.createElement('P'));
+		name.html('NAME');
+		name.attr('class', 'member-name');
+		overlay.append(name);
+		
+		var team = $(document.createElement('P'));
+		team.html('TEAM');
+		team.attr('class', 'member-team');
+		overlay.append(team);
+		
+		var position = $(document.createElement('P'));
+		position.html('POSITION');
+		position.attr('class', 'member-position');
+		overlay.append(position);
 
-		$(btn).on("mouseenter", function() {
-			OnMouseEnterTeamMemberBtn(btn, overlay);
+		btn.on("mouseenter", function() {
+			OnShowTeamMemberInfo(btn, overlay);
 		});
-		$(btn).on("mouseleave", function() {
-			OnMouseLeaveTeamMemberBtn(btn, overlay);
+		
+		btn.on("mouseleave", function() {
+			OnHideTeamMemberInfo(btn, overlay);
+		});
+		
+		btn.on("click", function() {
+			OnToggleTeamMemberInfo(btn, overlay);
 		});
 
-		btn.appendChild(overlay);
-		$("#teamImg").append(btn);
+		btn.append(overlay);
+		div.append(btn);
+		
+		$("#teamImg").append(div);
 	});
 }
 
-function OnMouseEnterTeamMemberBtn(btn, overlay) {
-	$(btn).addClass('mouse-hover');
-	$(overlay).addClass('mouse-hover');
+function OnShowTeamMemberInfo(btn, overlay) {
+	btn.addClass('mouse-hover');
+	overlay.addClass('mouse-hover');
 }
 
-function OnMouseLeaveTeamMemberBtn(btn, overlay) {
-	$(btn).removeClass('mouse-hover');
-	$(overlay).removeClass('mouse-hover');
+function OnHideTeamMemberInfo(btn, overlay) {
+	btn.removeClass('mouse-hover');
+	overlay.removeClass('mouse-hover');
+}
+
+function OnToggleTeamMemberInfo(btn, overlay) {
+	btn.toggleClass('mouse-hover');
+	overlay.toggleClass('mouse-hover');
 }
 
 function CreateMenuBehavior() {
