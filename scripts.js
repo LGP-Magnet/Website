@@ -49,17 +49,23 @@ function OnMouseLeaveTeamMemberBtn(btn, overlay) {
 }
 
 function CreateMenuBehavior() {
-		
-	$('#menuToggle, .menu-close').on('click', function(){
-		$('#menuToggle').toggleClass('active');
-		$('body').toggleClass('body-push-toleft');
-		$('#theMenu').toggleClass('menu-open');
+
+	$('#sidebar-toggle').on('click', function(){
+		$('#sidebar-menu').toggleClass('sidebar-menu-open');
 	});
 	
-	$('.menu-wrap > a').on('click', function(){
-		$('#menuToggle').toggleClass('active');
-		$('body').toggleClass('body-push-toleft');
-		$('#theMenu').toggleClass('menu-open');
+	$('#sidebar-menu a').on('click', function(){
+		$('#sidebar-menu').toggleClass('sidebar-menu-open');
+	});
+	
+	$('#topbar-toggle').on('click', function(){
+		$('#topbar-menu').toggleClass('topbar-menu-open');
+		$('#topbar-menu .topbar-menu-wrap').toggleClass('open');
+	});
+	
+	$('#topbar-menu a').on('click', function(){
+		$('#topbar-menu').toggleClass('topbar-menu-open');
+		$('#topbar-menu .topbar-menu-wrap').toggleClass('open');
 	});
 }
 
