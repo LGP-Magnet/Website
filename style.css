@@ -345,13 +345,13 @@ button {
 @media screen and (max-width: 720px) {
 	
 	.menu {
-		right: -35%;
-		width: 35%;
+		right: -50%;
+		width: 50%;
 	}
 
 	.menu.menu-open {
 		right: 0;
-		width: 35%;
+		width: 50%;
 	}
 }
 
@@ -437,15 +437,15 @@ button {
 
 #menuToggle {
 	position: absolute;
-    top: 20px;
-    left: -100px;
+    top: 2em;
+    left: -7em;
     z-index: 11;
     display: block;
     text-align: center;
     font-size: 14px;
     color: #ffffff;
-    width: 80px;
-    height: 80px;
+    width: 5em;
+    height: 5em;
     line-height: 40px;
     cursor: pointer;
     background: rgba(0,0,0,0.25);
@@ -455,6 +455,26 @@ button {
     -o-transition: all .1s ease-in-out;
     transition: all .1s ease-in-out;
 	    display: table;
+}
+
+@media screen and (max-width: 720px) {
+	
+	#menuToggle {
+		top: 2em;
+		left: -9em;
+		width: 7em;
+		height: 7em;		
+	}
+}
+
+@media screen and (max-width: 480px) {
+
+	#menuToggle {
+		top: 2em;
+		left: -12em;
+		width: 10em;
+		height: 10em;
+	}
 }
 
 #menuToggle > i{
