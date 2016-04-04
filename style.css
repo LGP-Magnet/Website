@@ -9,7 +9,6 @@ html *{
 
 body {
 	max-width: 100%;
-	font-size: 1.75vmin;
 }
 
 .skew{
@@ -67,6 +66,16 @@ body {
 	text-align: center;
 }
 
+#third {
+	background: #ffffff;
+	text-align: center;
+}
+
+#third .container-fluid {
+	margin-left: 4%;
+	margin-right: 4%;
+}
+
 .overlay-container{
 	position: relative; 
 	padding: 15px;
@@ -112,8 +121,8 @@ body {
 }
 
 .team-description-container{
-	padding: 0.5em;
-	margin: 2em;
+	padding: 18px;
+	margin: 25px;
 }
 .team-description-container p {
 	color: #fff;
@@ -148,7 +157,7 @@ body {
 	background-color: #a3767c;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
     #company-skew-2 {
         top: 60px;
     }
@@ -195,7 +204,7 @@ body {
 
 @media screen and (min-width: 992px) {
     #company-skew-3 {
-        top: 20px;
+        top: 10px;
     }
 }
 
@@ -257,7 +266,7 @@ body {
 
 
 
-#third {
+#fourth {
 	background: #404041;
 	color: white;
 	text-align: center;
