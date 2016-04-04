@@ -9,6 +9,7 @@ html *{
 
 body {
 	max-width: 100%;
+	font-size: 2vmin;
 }
 
 .skew{
@@ -110,17 +111,17 @@ body {
 	text-align: center;
 }
 
-
-
 .team-description-container{
-	padding-top: 20px;
-	padding-bottom: 20px;
-	margin-top: 20px;
-	margin-bottom: 20px;
+	padding: 1em;
+	margin: 2em;
 }
-.team-description-container p{
+.team-description-container p {
 	color: #fff;
 	text-align: center;
+}
+
+.team-description {
+	
 }
 
 #company-skew-1{
@@ -146,7 +147,7 @@ body {
 }
 
 
-#company-skew-2{
+#company-skew-2 {
 	position: relative;
 	background-color: #a3767c;
 }
