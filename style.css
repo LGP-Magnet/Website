@@ -124,6 +124,7 @@ body {
 	padding: 18px;
 	margin: 25px;
 }
+
 .team-description-container p {
 	color: #fff;
 	text-align: center;
@@ -132,6 +133,8 @@ body {
 #company-skew-1{
 	position: relative;
 	background-color: #f4a894;
+	padding-top: 40px;
+	padding-bottom: 40px;
 }
 
 #company-skew-1:after {
@@ -200,6 +203,8 @@ body {
 #company-skew-3{
 	position: relative;
 	background-color: #ffd17b;
+	padding-top: 40px;
+	padding-bottom: 40px;
 }
 
 @media screen and (min-width: 992px) {
@@ -245,6 +250,8 @@ body {
 #company-skew-4{
 	position: relative;
 	background-color: #5f6b75;
+	padding-top: 40px;
+	padding-bottom: 60px;
 }
 
 #company-skew-4:before {
