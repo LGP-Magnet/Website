@@ -5,7 +5,24 @@ $(document).ready(function(){
 	CreateMenuBehavior();
 	
 	CreateVideoBehavior();
+	
+	CreateSmoothScrollBehavior();
 });
+
+function CreateSmoothScrollBehavior() {
+	
+	var htmlBody = $('html,body');
+	
+	$('a.smooth-scroll').on('click', function(event) {
+		var href = $.attr(this, 'href');
+		if(href.length > 0) {
+			event.preventDefault();
+			htmlBody.animate({scrollTop:$(href).offset().top}, 400, "swing", function () {
+				window.location.hash = href;
+			});
+		}
+	});
+}
 
 function CreateTeamMemberBtns() {
 
@@ -59,7 +76,7 @@ function CreateTeamMemberBtns() {
 		btn.append(overlay);
 		div.append(btn);
 		
-		$("#teamImg").append(div);
+		$("#team-pics").append(div);
 	});
 }
 

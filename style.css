@@ -1,6 +1,6 @@
 @font-face {
     font-family: "magnet-lato";
-    src: url(Lato_font/Lato-Regular.ttf) format("truetype");
+    src: url(fonts/Lato_font/Lato-Regular.ttf) format("truetype");
 }
 
 html *{
@@ -9,10 +9,38 @@ html *{
 
 body {
 	max-width: 100%;
+	margin-bottom: -3.5%;
 }
 
-.skew{
-	/* z-index: -1; */
+/*                           */
+/*    Paragraphs & Titles    */
+/*___________________________*/
+h3 {
+    font-size: 50px;
+}
+
+h3.section-title {
+	text-align: center;
+	font-weight: 600;
+	margin-bottom: 25px;
+}
+
+p.add-upper-space {
+	margin-top: 25px;
+}
+
+p.remove-bottom-space {
+	margin-bottom: 0;
+}
+
+p.justify {
+	text-align: justify;
+}
+
+/*                           */
+/*           Skews           */
+/*___________________________*/
+.skew-left {
 	-webkit-transform: skewY(-4deg);
 	-moz-transform: skewY(-4deg);
 	-ms-transform: skewY(-4deg);
@@ -24,103 +52,100 @@ body {
 	padding-top: 30px;
 }
 
-.skew-content{
-	padding-top: 50px;
+.unskew-left {
    -webkit-transform: skewY(4deg) !important;
    -moz-transform: skewY(4deg) !important;
    -o-transform: skewY(4deg) !important;
    transform: skewY(4deg) !important;
 }
 
-#top{
+.skew-right {
+	-webkit-transform: skewY(4deg);
+	-moz-transform: skewY(4deg);
+	-ms-transform: skewY(4deg);
+	-o-transform: skewY(4deg);
+	transform: skewY(4deg);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: initial;
+	padding-bottom: 100px;
+	padding-top: 30px;
+}
+
+.unskew-right {
+   -webkit-transform: skewY(-4deg) !important;
+   -moz-transform: skewY(-4deg) !important;
+   -o-transform: skewY(-4deg) !important;
+   transform: skewY(-4deg) !important;
+}
+
+.skew-content {
+	padding-top: 2em;	
+}
+ 
+/*                           */
+/*           Video           */
+/*___________________________*/
+#top {
 	margin-bottom: -3.5%;
 }
-#main-logo-container{
-	/*height:100vh;*/
-	/*position: relative;
-	width: 100%;*/
+
+.video-logo {
+    width: 60%;
+    height: auto;
+    display: table-cell;
+    vertical-align: middle;
+    margin-left: 20%;
+    margin-top: 15%;
 }
-#first {
+
+.video-cover {
+	display: table;
+    width: 100%;
+    height: 200% !important;
+    position: absolute;
+    background-color: rgba(255,255,255,.5);
+}
+
+.company-video {
+	z-index: -1;
+}
+
+/*                           */
+/*    Company Description    */
+/*___________________________*/
+#company-description {
 	background: #EDEDED;
 	color: white;
-	z-index: 9999;
-}
-
-#first h3 {
-	text-align: center;
-}
-
-.company-description-container{
+	z-index: 100;
 	font-size: 2rem;
 	color: #434343;
 }
 
-.section-title{
+#company-description h3 {
 	text-align: center;
-	font-weight: bold;
-	margin-bottom: 50px;
 }
 
-#second {
+#our-team {
 	background: #ffffff;
 	text-align: center;
 }
 
-#third {
-	background: #ffffff;
+#projects {
+	background: #EDEDED;
 	text-align: center;
 }
 
-#third .container-fluid {
+#projects .container-fluid {
 	margin-left: 4%;
 	margin-right: 4%;
 }
 
-.overlay-container{
+.overlay-container {
 	position: relative; 
 	padding: 15px;
 }
 
-.overlay-container .img-overlay{
-	display: none;
-	background-color: rgba(135,199,212,0.85);
-}
-
-.overlay-container .img-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(135,199,212,0.85);
-    color: #fff;
-    
-}
-
-.vertical-center-outer {
-    display: table;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-}
-
-.vertical-center-middle {
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.vertical-center-inner {
-    margin-left: auto;
-    margin-right: auto; 
-    width: 100%;
-}
-
-
-.team-role{
-	text-align: center;
-}
-
-.team-description-container{
+.team-description-container {
 	padding: 18px;
 	margin: 25px;
 }
@@ -130,7 +155,10 @@ body {
 	text-align: center;
 }
 
-#company-skew-1{
+/*                           */
+/*       Company Skews       */
+/*___________________________*/
+#company-skew-1 {
 	position: relative;
 	background-color: #f4a894;
 	padding-top: 40px;
@@ -153,7 +181,6 @@ body {
     -o-transform: skewX(3deg);
     transform: skewX(3deg);
 }
-
 
 #company-skew-2 {
 	position: relative;
@@ -271,16 +298,20 @@ body {
     transform: skewX(3deg);
 }
 
-
-
+/*                           */
+/*          Fourth           */
+/*___________________________*/
 #fourth {
 	background: #404041;
 	color: white;
 	text-align: center;
+	padding-bottom: 40px;
+	margin-bottom: -60px;
 }
 
-.bigP {
-    margin: 0 0 50px;
+.bottom {
+	margin-bottom: -40px;
+	border-bottom: 120px solid #404041;
 }
 
 .titleCenter{
@@ -290,21 +321,23 @@ body {
 	margin-top: 5%;
 }
 
-/*********** Team Members ***********/
-#teamImg {
+/*                           */
+/*     Team Member Pics      */
+/*___________________________*/
+#team-pics {
 	text-align: center;
 }
 
-#teamImg .col {
+#team-pics .col {
 	text-align: center;
 }
 
-#teamImg .col:focus {
+#team-pics .col:focus {
 	outline: none !important;
 	box-shadow: none !important;
 }
 
-#teamImg .col {
+#team-pics .col {
 	box-shadow: none !important;
 	background-color: transparent;
 	padding: 0;
@@ -378,7 +411,9 @@ body {
 	font-size: 0.8em;
 }
 
-/*********** Sidebar ***********/
+/*                           */
+/*          Sidebar          */
+/*___________________________*/
 .sidebar-menu {
 	position: fixed;
 	top: 0;
@@ -491,7 +526,9 @@ body {
 			transition: all .1s ease-in-out;
 }
 
-/*********** Topbar ***********/
+/*                           */
+/*           Topbar          */
+/*___________________________*/
 .topbar-menu {
 	position: fixed;
 	top: 0;
@@ -607,30 +644,4 @@ body {
 		-ms-transition: all .1s ease-in-out;
 		 -o-transition: all .1s ease-in-out;
 			transition: all .1s ease-in-out;
-}
-
-.imgCenter {
-	margin: auto;
-    display: block;
-}
-
-.videoLogo {
-    width: 60%;
-    height: auto;
-    display: table-cell;
-    vertical-align: middle;
-    margin-left: 20%;
-    margin-top: 15%;
-}
-
-h3 {
-    font-size: 50px;
-}
-
-.coverVideo{
-	display: table;
-    width: 100%;
-    height: 200% !important;
-    position: absolute;
-    background-color: rgba(255,255,255,.5);
 }
