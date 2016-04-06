@@ -27,71 +27,90 @@ function CreateSmoothScrollBehavior() {
 function CreateTeamMemberBtns() {
 
 	var team = [
-	"01_AndrePires.gif", "02_VitorTeixeira.gif", "03_JoaoBandeira.gif", "04LuisMagalhaes.gif", "05_JoaoCosta.gif", "06_NunoDuarte.gif",
-	"07_PedroCarreira.gif", "08_JoaoSoares.gif", "09_LilianaRibeiro.gif", "10_DiogoGomes.gif", "11_MiguelNunes.gif", "12_RicardoLoureiro.gif",
-	"13_AnaAlves.gif", "14_BeatrizCavaleiro.gif", "15_AndrePeixoto.gif", "16_MiguelSandim.gif", "17_RicardoFigueiredo.gif", "18_Matheus.gif",
-	"19_ClaudioMonteiro.gif", "20_AndreBordalo.gif", "21_JoaoCardoso.gif", "22_CarolinaFaria.gif", "23_Guilherme.gif", "24_AndreRegado.gif",
-	"25_AnaRitaFerreira.gif", "26_BrunoAlves.gif", "27_JoaoPereira.gif", "28_CarlosPereira.gif", "29_JoseCardoso.gif", "30_AnaisDias.gif",
-	"31_RaquelCorreia.gif", "32_RitaLima.gif", "33_DanielCouceiro.gif", "34_JoaoFernandes.gif"];
+	["01_AndrePires.gif", "Andre Pires", "", ""], ["02_VitorTeixeira.gif", "Vítor Teixeira", "", ""],
+	["03_JoaoBandeira.gif", "João Bandeira", "", ""], ["04LuisMagalhaes.gif", "Luís Magalhães", "CEO", "Team C"],
+	["05_JoaoCosta.gif", "João Costa", "", ""], ["06_NunoDuarte.gif", "Nuno Duarte", "", ""],
+	["07_PedroCarreira.gif", "Pedro Carreira", "", ""], ["08_JoaoSoares.gif", "João Soares", "", ""],
+	["09_LilianaRibeiro.gif", "Liliana Ribeiro", "", ""], ["10_DiogoGomes.gif", "Diogo Gomes", "", ""],
+	["11_MiguelNunes.gif", "Miguel Nunes", "", ""], ["12_RicardoLoureiro.gif", "Ricardo Loureiro", "", ""],
+	["13_AnaAlves.gif", "Ana Alves", "", ""], ["14_BeatrizCavaleiro.gif", "Beatriz Cavaleiro", "", ""],
+	["15_AndrePeixoto.gif", "André Peixoto", "", ""], ["16_MiguelSandim.gif", "Miguel Sandim", "", ""],
+	["17_RicardoFigueiredo.gif", "Ricardo Figueiredo", "", ""], ["18_Matheus.gif", "Matheus Scarlatti", "", ""],
+	["19_ClaudioMonteiro.gif", "Cláudio Monteiro", "", ""], ["20_AndreBordalo.gif", "André Bordalo", "", ""],
+	["21_JoaoCardoso.gif", "João Cardoso", "", ""], ["22_CarolinaFaria.gif", "Carolina Faria", "", ""],
+	["23_Guilherme.gif", "Guilherme", "", ""], ["24_AndreRegado.gif", "André Regado", "", ""],
+	["25_AnaRitaFerreira.gif", "Ana Rita Ferreira", "", ""], ["26_BrunoAlves.gif", "Bruno Alves", "", ""],
+	["27_JoaoPereira.gif", "João Pereira", "", ""], ["28_CarlosPereira.gif", "Carlos Pereira", "", ""],
+	["29_JoseCardoso.gif", "José Cardoso", "", ""], ["30_AnaisDias.gif", "Anaís Dias", "", ""],
+	["31_RaquelCorreia.gif", "Raquel Correia", "", ""], ["32_RitaLima.gif", "Rita Lima", "", ""],
+	["33_DanielCouceiro.gif", "Daniel Couceiro", "", ""], ["34_JoaoFernandes.gif", "João Fernandes", "", ""]];
 	
-	$.each(team, function(index, gif) {
+	$.each(team, function(index, info) {
 		var div = $(document.createElement('DIV'));
-		div.attr('class', 'col col-md-2 col-sm-3 col-xs-4');
+		div.attr('class', 'col col-md-2 col-sm-3 col-xs-3 img-responsive');
 		
-		var btn = $(document.createElement("BUTTON"));
-		btn.attr('type', 'button');
-		btn.attr("class", "team-member-button");
-		btn.attr("style", "background: url(./img/team/" + gif + ") no-repeat center;");
-
 		var overlay = $(document.createElement("DIV"));
 		overlay.attr("class","team-member-overlay");
 		
+		var img = $(document.createElement("IMG"));
+		img.attr('src','./img/team/' + info[0]);
+		img.attr('alt', info[1]);
+		img.attr('title', info[1]);
+		img.attr("class", "team-member-img img-responsive");
+		
+		var memberInfo = $(document.createElement("DIV"));
+		memberInfo.attr("class","member-info");
+		
 		var name = $(document.createElement('P'));
-		name.html('NAME');
+		name.html(info[1].length > 0 ? info[1] : 'Name');
 		name.attr('class', 'member-name');
-		overlay.append(name);
-		
-		var team = $(document.createElement('P'));
-		team.html('TEAM');
-		team.attr('class', 'member-team');
-		overlay.append(team);
-		
-		var position = $(document.createElement('P'));
-		position.html('POSITION');
+		var position = $(document.createElement('p'));
+		position.html(info[2].length ? info[2] : 'Position');
 		position.attr('class', 'member-position');
-		overlay.append(position);
+		var team = $(document.createElement('P'));
+		team.html(info[3].length > 0 ? info[3] : 'Team X');
+		team.attr('class', 'member-team');
+		
+		memberInfo.append(name);
+		memberInfo.append(team);
+		memberInfo.append(position);
 
-		btn.on("mouseenter", function() {
-			OnShowTeamMemberInfo(btn, overlay);
+		img.on("mouseenter", function() {
+			OnShowTeamMemberInfo(img, overlay);
 		});
 		
-		btn.on("mouseleave", function() {
-			OnHideTeamMemberInfo(btn, overlay);
+		img.on("mouseleave", function() {
+			OnHideTeamMemberInfo(img, overlay);
 		});
 		
-		btn.on("click", function() {
-			OnToggleTeamMemberInfo(btn, overlay);
+		img.on("click", function() {
+			OnToggleTeamMemberInfo(img, overlay);
 		});
 
-		btn.append(overlay);
-		div.append(btn);
+		var info = $(document.createElement("DIV"));
+		info.attr('class', 'member-info-container');
+		info.append(memberInfo);
+		
+		overlay.append(img);
+		overlay.append(info);
+		div.append(overlay);
 		
 		$("#team-pics").append(div);
 	});
 }
 
-function OnShowTeamMemberInfo(btn, overlay) {
-	btn.addClass('mouse-hover');
+function OnShowTeamMemberInfo(img, overlay) {
+	img.addClass('mouse-hover');
 	overlay.addClass('mouse-hover');
 }
 
-function OnHideTeamMemberInfo(btn, overlay) {
-	btn.removeClass('mouse-hover');
+function OnHideTeamMemberInfo(img, overlay) {
+	img.removeClass('mouse-hover');
 	overlay.removeClass('mouse-hover');
 }
 
-function OnToggleTeamMemberInfo(btn, overlay) {
-	btn.toggleClass('mouse-hover');
+function OnToggleTeamMemberInfo(img, overlay) {
+	img.toggleClass('mouse-hover');
 	overlay.toggleClass('mouse-hover');
 }
 

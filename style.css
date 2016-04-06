@@ -22,7 +22,7 @@ h3 {
 h3.section-title {
 	text-align: center;
 	font-weight: 600;
-	margin-bottom: 25px;
+	margin-bottom: 40px;
 }
 
 p.add-upper-space {
@@ -299,9 +299,9 @@ p.justify {
 }
 
 /*                           */
-/*          Fourth           */
+/*         Contacts          */
 /*___________________________*/
-#fourth {
+#contacts {
 	background: #404041;
 	color: white;
 	text-align: center;
@@ -340,74 +340,67 @@ p.justify {
 #team-pics .col {
 	box-shadow: none !important;
 	background-color: transparent;
-	padding: 0;
 	margin: auto;
-	margin-bottom: 2em;
-}
-
-.team-member-button {
-	width: 150px;
-	height: 150px;
-	padding: 0;
-	margin: 0;
-	outline: none !important;
-	background: url("../img/team/foto.png") no-repeat center;
-	background-color: rgba(169, 169, 169, 0.93);
-    background-size: 100% 100%;
-	border-radius: 50%;
-	border: 0;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	text-align: center;
 }
 
 .team-member-overlay {
-    height: 100%;
-    width: 100%;
-    position: relative;
-    border: 0;
+	overflow: hidden;
 	border-radius: 50%;
-    padding: 0;
-    background-size: cover;
-	background-color: transparent;
-	padding-top: 22%;
-	
-	-webkit-transition: background-color .3s ease;
-    -moz-transition: background-color .3s ease;
-    -ms-transition: background-color .3s ease;
-    -o-transition: background-color .3s ease;
-    transition: background-color .3s ease;
 }
 
-.team-member-overlay.mouse-hover {
-	background-color: rgba(169, 169, 169, 0.93);
+.team-member-img {
+	margin: auto;
+	border-radius: 50%;
 }
 
-.team-member-overlay > p {
-	color: transparent;
-	display: block;
-	margin: 0;
-	padding: 0;
-	padding-bottom: 0.5em;
+.member-info-container {
+	position: relative;
+	padding-bottom: 2px;
 }
 
-.team-member-overlay.mouse-hover > p {
+.member-info {
+	background: white;
 	color: #434343;
-	
-	-webkit-transition: color .5s ease;
-    -moz-transition: color .5s ease;
-    -ms-transition: color .5s ease;
-    -o-transition: color .5s ease;
-    transition: color .5s ease;
+	position: absolute;
+	text-align: center;
+	padding-bottom: 0.5em;
+	bottom: 0;
+	width: 100%;
 }
 
-.team-member-overlay > p.member-name {
-	font-size: 1.5em;
+.member-info:hover {
+	background: transparent;
+	color: transparent;
+	cursor: default;
+	
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+
+.member-info > p {
+	margin-bottom: 0px;
+}
+
+.member-info > p:hover {
+	cursor: default;
+}
+
+.member-info > p.member-name {
+	font-size: 1em;
 	font-weight: 600;
 }
 
-.team-member-overlay > p.member-team {
-	font-size: 0.8em;
+.member-info > p.member-team {
+	font-size: 1em;
 }
 
-.team-member-overlay > p.member-position {
+.member-info > p.member-position {
 	font-size: 0.8em;
 }
 
