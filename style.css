@@ -22,7 +22,7 @@ h3 {
 h3.section-title {
 	text-align: center;
 	font-weight: 600;
-	margin-bottom: 40px;
+	margin-bottom: 25px;
 }
 
 p.add-upper-space {
@@ -150,9 +150,14 @@ p.justify {
 	margin: 25px;
 }
 
-.team-description-container p {
-	color: #fff;
+.team-description {
+	color: #FFF;
 	text-align: center;
+	font-size: 1em;
+}
+
+.team-description.invert-color {
+	color: #434343;
 }
 
 /*                           */
@@ -346,62 +351,121 @@ p.justify {
 	text-align: center;
 }
 
+#our-team .team-filter li > a {
+	border-radius: 0;
+	color: #434343;
+	outline: none;
+	
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	 -o-transition: all .3s ease-in-out;
+		transition: all .3s ease-in-out;
+}
+
 .team-member-overlay {
+	position: inherit;
 	overflow: hidden;
 	border-radius: 50%;
+	background-color: transparent;
+	max-width: 150px;
+}
+
+.team-member-overlay.hide {
+	display: none;
 }
 
 .team-member-img {
+	background-image: no-repeat center;
 	margin: auto;
 	border-radius: 50%;
 }
 
 .member-info-container {
-	position: relative;
-	padding-bottom: 2px;
-}
-
-.member-info {
-	background: white;
-	color: #434343;
+	cursor: pointer;
 	position: absolute;
-	text-align: center;
-	padding-bottom: 0.5em;
-	bottom: 0;
+	top: 0;
+	height: 100%;
 	width: 100%;
 }
 
-.member-info:hover {
+.member-info-table-align {
+	display : table;
+	background: #434343;
+	color: #D8D8D8;
+	width: 100%;
+	height: 100%;
+	
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+.member-info-table-align.mouse-hover, .member-info-table-align.mouse-clicked {
 	background: transparent;
 	color: transparent;
-	cursor: default;
-	
-	-webkit-transition: all .3s ease-in-out;
-	-moz-transition: all .3s ease-in-out;
-	-ms-transition: all .3s ease-in-out;
-	-o-transition: all .3s ease-in-out;
-	transition: all .3s ease-in-out;
+	cursor: pointer;
+}
+
+.member-info {
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none;   /* Chrome/Safari/Opera */
+	-khtml-user-select: none;    /* Konqueror */
+	-moz-user-select: none;      /* Firefox */
+	-ms-user-select: none;       /* IE/Edge */
+	user-select: none;           /* non-prefixed version, currently
+								  not supported by any browser */
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+	height: 100%;
 }
 
 .member-info > p {
 	margin-bottom: 0px;
 }
 
-.member-info > p:hover {
-	cursor: default;
-}
-
 .member-info > p.member-name {
-	font-size: 1em;
+	font-size: 0.7em;
 	font-weight: 600;
 }
 
 .member-info > p.member-team {
-	font-size: 1em;
+	font-size: 0.7em;
 }
 
 .member-info > p.member-position {
-	font-size: 0.8em;
+	font-size: 0.6em;
+}
+
+@media (min-width: 600px) {
+	.member-info > p.member-name {
+		font-size: 0.85em;
+	}
+	
+	.member-info > p.member-team {
+		font-size: 0.85em;
+	}
+	
+	.member-info > p.member-position {
+		font-size: 0.7em;
+	}
+}
+
+@media (min-width: 1200px) {
+	.member-info > p.member-name {
+		font-size: 1em;
+	}
+	
+	.member-info > p.member-team {
+		font-size: 1em;
+	}
+	
+	.member-info > p.member-position {
+		font-size: 0.8em;
+	}
 }
 
 /*                           */
@@ -530,11 +594,11 @@ p.justify {
 	z-index: 10000;
 	text-align: center;
 	
-	-webkit-transition: all height .3s ease-in-out;
-	-moz-transition: all height .3s ease-in-out;
-	-ms-transition: all height .3s ease-in-out;
-	 -o-transition: all height .3s ease-in-out;
-		transition: all height .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	 -o-transition: all .3s ease-in-out;
+		transition: all .3s ease-in-out;
 }
 
 .topbar-menu.topbar-menu-open {
