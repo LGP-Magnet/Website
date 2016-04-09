@@ -43,15 +43,27 @@ var team = [
 
 $(document).ready(function(){
 
+	//console.log('begin');
+
 	CreateTeamMemberBtns();
+	
+	//console.log('create team buttons');
 	
 	CreateTeamFilters();
 
+	//console.log('create team filters');
+	
 	CreateMenuBehavior();
+	
+	//console.log('created menu behavior');
 	
 	CreateVideoBehavior();
 	
+	//console.log('created video behavior');
+	
 	CreateSmoothScrollBehavior();
+	
+	//console.log('created smooth scroll behavior');
 });
 
 function CreateSmoothScrollBehavior() {
