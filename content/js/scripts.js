@@ -92,10 +92,6 @@ function CreateTeamMemberBtns() {
         img.attr('title', name);
         img.attr("class", "team-member-img img-responsive");
 
-        /* Creating Member Info */
-        var memberInfo = $(document.createElement("DIV"));
-        memberInfo.attr("class", "member-info");
-
         var pName = $(document.createElement('P'));
         pName.html(name.length > 0 ? name : 'Name');
         pName.attr('class', 'member-name');
@@ -107,18 +103,9 @@ function CreateTeamMemberBtns() {
         var pTeam = $(document.createElement('P'));
         pTeam.html(visualTeam.length > 0 ? visualTeam : 'Team X');
         pTeam.attr('class', 'member-team');
-
-        memberInfo.append(pName);
-        memberInfo.append(pTeam);
-        memberInfo.append(pPosition);
-
-        var tableAlign = $(document.createElement("DIV"));
-        tableAlign.attr('class', 'member-info-table-align');
-        tableAlign.append(memberInfo);
-
         var infoElem = $(document.createElement("DIV"));
-        infoElem.attr('class', 'member-info-container');
-        infoElem.append(tableAlign);
+        infoElem.attr('class', 'member-info');
+        // infoElem.append(tableAlign);
 
         overlay.on("mouseenter", function () {
             OnShowTeamMemberInfo(tableAlign);
@@ -131,6 +118,10 @@ function CreateTeamMemberBtns() {
         overlay.on("click", function () {
             OnMemberInfoClick(tableAlign);
         });
+
+        infoElem.append(pName);
+        infoElem.append(pTeam);
+        infoElem.append(pPosition);
 
         overlay.append(img);
         overlay.append(infoElem);
