@@ -36,8 +36,8 @@ var team = [
     ["18_Matheus.gif", "Matheus Scarlatti", "2nd CFO", "Multimedia", "Board Multimedia"],
     ["31_RaquelCorreia.gif", "Raquel Correia", "CFO", "Multimedia", "Board Multimedia"],
 
-    ["22_CarolinaFaria.gif", "Carolina Faria", "CCO - Designer", "Design", "Board Design"],
-    ["23_Guilherme.gif", "Guilherme", "Designer", "Design", "Design"]
+    ["22_CarolinaFaria.gif", "Carolina Faria", "CCO", "Design", "Board Design"],
+    ["23_Guilherme.gif", "Guilherme", "", "Design", "Design"]
 ];
 
 $(document).ready(function () {
