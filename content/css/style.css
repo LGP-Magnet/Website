@@ -1,10 +1,12 @@
 @font-face {
-    font-family: "magnet-lato";
-    src: url(/content/fonts/Lato_font/Lato-Regular.ttf) format("truetype");
+    font-family: 'magnet-lato';
+    src:
+            local('../fonts/Lato_font/Lato-Regular.ttf'),
+            url('../fonts/Lato_font/Lato-Regular.ttf') format('truetype');
 }
 
 html * {
-    font-family: "magnet-lato", sans-serif;
+    font-family: 'magnet-lato', sans-serif;
 }
 
 body {
@@ -719,21 +721,20 @@ p.justify {
 /*                           */
 /*          Contacts         */
 /*___________________________*/
-#contact_us > a {
-    display: inline-block;
-    text-align: center;
-    text-decoration: none;
-    margin: auto auto 10px;
+#contact_us {
+    margin-bottom: 15px;
 }
 
-#contact_us > a > .btn {
+#contact_us > a {
     display: inline-block;
-    margin: auto;
+    text-shadow: none;
+    border: none;
+    border-radius: 1px;
     color: #404041;
     background: whitesmoke none;
-    border: 1px solid whitesmoke;
-    border-radius: 1px;
-    text-shadow: none;
+    padding: 5px;
+    width: 35px;
+    height: 35px;
 
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
@@ -741,24 +742,19 @@ p.justify {
     transition: all .3s;
 }
 
-#contact_us > a > .btn > span {
-    height: 100%;
-    vertical-align: middle;
-}
-
-#contact_us > a > .btn > span.glyphicon {
-    vertical-align: middle;
-    top: 0;
-}
-
-#contact_us > a > .btn img {
-    width: 14px;
-    height: 16.8px;
-    vertical-align: middle;
-}
-
-#contact_us > a > .btn:hover {
+#contact_us > a:hover {
     background-color: #97BAC7;
-    border: 1px solid #97BAC7;
+}
 
+#contact_us > a > span {
+    width: 20px;
+    height: 20px;
+    line-height: inherit;
+    vertical-align: middle;
+}
+
+#contact_us > a > img {
+    width: 20px;
+    height: 20px;
+    padding: 2px;
 }
