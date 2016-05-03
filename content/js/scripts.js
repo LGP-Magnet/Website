@@ -105,19 +105,6 @@ function CreateTeamMemberBtns() {
         pTeam.attr('class', 'member-team');
         var infoElem = $(document.createElement("DIV"));
         infoElem.attr('class', 'member-info');
-        // infoElem.append(tableAlign);
-
-        overlay.on("mouseenter", function () {
-            OnShowTeamMemberInfo(tableAlign);
-        });
-
-        overlay.on("mouseleave", function () {
-            OnHideTeamMemberInfo(tableAlign);
-        });
-
-        overlay.on("click", function () {
-            OnMemberInfoClick(tableAlign);
-        });
 
         infoElem.append(pName);
         infoElem.append(pTeam);
@@ -129,25 +116,6 @@ function CreateTeamMemberBtns() {
 
         $("#team-pics").append(outerCol);
     });
-}
-
-function OnShowTeamMemberInfo(elem) {
-    elem.addClass('mouse-hover');
-}
-
-function OnHideTeamMemberInfo(elem) {
-    elem.removeClass('mouse-hover');
-}
-
-function OnMemberInfoClick(elem) {
-    elem.toggleClass('mouse-clicked');
-    window.setTimeout(function () {
-        OnMemberInfoCancelClick(elem)
-    }, 2000);
-}
-
-function OnMemberInfoCancelClick(elem) {
-    elem.toggleClass('mouse-clicked');
 }
 
 function CreateTeamFilters() {
