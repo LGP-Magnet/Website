@@ -16,7 +16,7 @@ var team = [
     ["32_RitaLima.gif", "Rita Lima", "", "Team B", "Team B"],
 
     ["25_AnaRitaFerreira.gif", "Ana Rita Ferreira", "Team Leader", "Team C", "Team C"],
-    ["01_AndrePires.gif", "Andre Pires", "", "Team C", "Team C"],
+    ["01_AndrePires.gif", "André Pires", "", "Team C", "Team C"],
     ["21_JoaoCardoso.gif", "João Cardoso", "", "Team C", "Team C"],
     ["08_JoaoSoares.gif", "João Soares", "", "Team C", "Team C"],
     ["09_LilianaRibeiro.gif", "Liliana Ribeiro", "", "Team C", "Team C"],
