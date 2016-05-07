@@ -111,7 +111,7 @@ function CreateTeamMemberBtns() {
         infoElem.append(pPosition);
 
         overlay.append(img);
-        overlay.append(infoElem);
+        //overlay.append(infoElem);
         outerCol.append(overlay);
 
         $("#team-pics").append(outerCol);
