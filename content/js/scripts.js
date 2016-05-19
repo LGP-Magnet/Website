@@ -46,8 +46,6 @@ $(document).ready(function () {
 
     CreateTeamFilters();
 
-    CreateMenuBehavior();
-
     CreateVideoBehavior();
 
     CreateSmoothScrollBehavior();
@@ -130,8 +128,6 @@ function CreateTeamMemberBtns() {
             container.removeClass('click');
         });
 
-        //infoContainer.hide();
-
         $("#team-pics").append(outerCol);
     });
 }
@@ -173,20 +169,6 @@ function OnTeamFilterClicked(filter, pics) {
             pic.addClass('hide');
         }
     }
-}
-
-function CreateMenuBehavior() {
-    // var toggleMenuBtn = $('.navbar-header a.navbar-toggle');
-    //
-    // var navbarCollapse = $('.navbar .navbar-collapse');
-    //
-    // $('.navbar ul.nav.navbar-nav > li > a').on('click', function(item) {
-    //     toggleMenuBtn.addClass('collapsed');
-    //     toggleMenuBtn.attr('aria-expanded', 'false');
-    //
-    //     navbarCollapse.removeClass('in');
-    //     toggleMenuBtn.attr('aria-expanded', 'false');
-    // });
 }
 
 function CreateVideoBehavior() {
