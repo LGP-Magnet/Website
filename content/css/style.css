@@ -110,10 +110,9 @@ nav.navbar {
     left: 0;
     right: 0;
     z-index: 10000;
-    background: rgba(0, 0, 0, 0.8);
     border: none;
     border-radius: 0;
-    background-color: #EDEDED;
+    background: #EDEDED;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
 }
 
@@ -156,6 +155,10 @@ nav.navbar {
     cursor: pointer;
     background-color: transparent;
     color: #87D0D5;
+}
+
+nav.navbar ul.navbar-nav > li {
+    text-align: center;
 }
 
 nav.navbar ul.navbar-nav > li > a {
@@ -431,6 +434,23 @@ nav.navbar a.navbar-brand > img {
     color: white;
 }
 
+#our-team .team-filter > .nav.nav-tabs {
+    width: 100%;
+    margin: auto;
+    border-bottom: 0;
+}
+
+#our-team .team-filter {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+#our-team .team-filter > ul > li {
+    display: table-cell;
+    width: 1%;
+    float: none;
+}
+
 #our-team .team-filter > ul > li.active > a {
     background-color: transparent;
     border-bottom-color: #87D0D5;
@@ -443,6 +463,10 @@ nav.navbar a.navbar-brand > img {
 }
 
 #our-team .team-filter > ul > li > a {
+    display: block;
+    margin: 0;
+    padding-right: 1px;
+    padding-left: 1px;
     border-radius: 1px 1px 0 0;
     border-width: 4px 0 4px 0;
     border-color: transparent;
@@ -459,7 +483,7 @@ nav.navbar a.navbar-brand > img {
     box-shadow: none !important;
     background-color: transparent;
     margin: auto;
-    padding-top: 20px;
+    padding: 10px 5px 0;
 }
 
 .team-member-container {
@@ -468,7 +492,7 @@ nav.navbar a.navbar-brand > img {
     cursor: default;
     border-radius: 8px;
     box-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
-    outline: none;
+    outline: none !important;
     border: none;
 
     -webkit-transition: box-shadow .2s;
