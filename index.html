@@ -24,7 +24,7 @@
     <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+               data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="glyphicon glyphicon-magnet" aria-hidden="true"></span>
             </a>
@@ -35,12 +35,36 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="#top" class="smooth-scroll">Home</a></li>
-                <li><a href="#company-description" class="smooth-scroll">About Us</a></li>
-                <li><a href="#our-team" class="smooth-scroll">Our Team</a></li>
-                <li><a href="#projects" class="smooth-scroll">Projects</a></li>
-                <li><a href="#partners" class="smooth-scroll">Our Partners</a></li>
-                <li><a href="#contacts" class="smooth-scroll">Contacts</a></li>
+                <li>
+                    <a href="#top" class="smooth-scroll hidden-xs">Home</a>
+                    <a href="#top" class="smooth-scroll visible-xs"
+                       data-toggle="collapse" data-target=".navbar-collapse" >Home</a>
+                </li>
+                <li>
+                    <a href="#company-description" class="smooth-scroll hidden-xs">About Us</a>
+                    <a href="#company-description" class="smooth-scroll visible-xs"
+                       data-toggle="collapse" data-target=".navbar-collapse">About Us</a>
+                </li>
+                <li>
+                    <a href="#our-team" class="smooth-scroll hidden-xs">Our Team</a>
+                    <a href="#our-team" class="smooth-scroll visible-xs"
+                       data-toggle="collapse" data-target=".navbar-collapse">Our Team</a>
+                </li>
+                <li>
+                    <a href="#projects" class="smooth-scroll hidden-xs">Projects</a>
+                    <a href="#projects" class="smooth-scroll visible-xs"
+                       data-toggle="collapse" data-target=".navbar-collapse">Projects</a>
+                </li>
+                <li>
+                    <a href="#partners" class="smooth-scroll hidden-xs">Our Partners</a>
+                    <a href="#partners" class="smooth-scroll visible-xs"
+                       data-toggle="collapse" data-target=".navbar-collapse">Our Partners</a>
+                </li>
+                <li>
+                    <a href="#contacts" class="smooth-scroll hidden-xs">Contacts</a>
+                    <a href="#contacts" class="smooth-scroll visible-xs"
+                       data-toggle="collapse" data-target=".navbar-collapse">Contacts</a>
+                </li>
             </ul>
         </div>
     </div>

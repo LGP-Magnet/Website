@@ -176,26 +176,17 @@ function OnTeamFilterClicked(filter, pics) {
 }
 
 function CreateMenuBehavior() {
-
-    $('#sidebar-toggle').on('click', function () {
-        $('#sidebar-menu').toggleClass('sidebar-menu-open');
-    });
-
-    $('#sidebar-menu').find('a').on('click', function () {
-        $('#sidebar-menu').toggleClass('sidebar-menu-open');
-    });
-
-    $('#topbar-toggle').on('click', function () {
-        var $topbarMenu = $('#topbar-menu');
-        $topbarMenu.toggleClass('topbar-menu-open');
-        $topbarMenu.find('.topbar-menu-wrap').toggleClass('open');
-    });
-
-    $('#topbar-menu').find('a').on('click', function () {
-        var $topbarMenu = $('#topbar-menu');
-        $topbarMenu.toggleClass('topbar-menu-open');
-        $topbarMenu.find('.topbar-menu-wrap').toggleClass('open');
-    });
+    // var toggleMenuBtn = $('.navbar-header a.navbar-toggle');
+    //
+    // var navbarCollapse = $('.navbar .navbar-collapse');
+    //
+    // $('.navbar ul.nav.navbar-nav > li > a').on('click', function(item) {
+    //     toggleMenuBtn.addClass('collapsed');
+    //     toggleMenuBtn.attr('aria-expanded', 'false');
+    //
+    //     navbarCollapse.removeClass('in');
+    //     toggleMenuBtn.attr('aria-expanded', 'false');
+    // });
 }
 
 function CreateVideoBehavior() {
