@@ -20,7 +20,7 @@ body {
 }
 
 /*                           */
-/*    Paragraphs & Titles    */
+/*          Generics         */
 /*___________________________*/
 h3 {
     font-size: 50px;
@@ -42,6 +42,18 @@ p.remove-bottom-space {
 
 p.justify {
     text-align: justify;
+}
+
+a {
+    outline: none !important;
+}
+
+a:focus {
+    outline: none !important;
+}
+
+.hide {
+    display: none;
 }
 
 /*                           */
@@ -130,7 +142,6 @@ nav.navbar {
 
     -webkit-transition: color .2s;
     -moz-transition: color .2s;
-    -ms-transition: color .2s;
     -o-transition: color .2s;
     transition: color .2s;
 }
@@ -155,7 +166,6 @@ nav.navbar ul.navbar-nav > li > a {
 
     -webkit-transition: border .2s;
     -moz-transition: border .2s;
-    -ms-transition: border .2s;
     -o-transition: border .2s;
     transition: border .2s;
 }
@@ -416,27 +426,27 @@ nav.navbar a.navbar-brand > img {
 /*                           */
 /*     Team Member Pics      */
 /*___________________________*/
-#team-pics, #team-pics .col {
-    text-align: center;
+#our-team {
+    background-color: #434343;
+    color: white;
 }
 
-#team-pics .col {
-    box-shadow: none !important;
+#our-team .team-filter > ul > li.active > a {
     background-color: transparent;
-    margin: auto;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    text-align: center;
+    border-bottom-color: #87D0D5;
+    color: white;
 }
 
-#team-pics .col:focus {
-    outline: none !important;
-    box-shadow: none !important;
+#our-team .team-filter > ul > li > a:hover {
+    background-color: transparent;
+    border-bottom-color: #87D0D5;
 }
 
-#our-team .team-filter li > a {
-    border-radius: 0;
-    color: #434343;
+#our-team .team-filter > ul > li > a {
+    border-radius: 1px 1px 0 0;
+    border-width: 4px 0 4px 0;
+    border-color: transparent;
+    color: #aaaaaa;
     outline: none;
 
     -webkit-transition: all .3s ease-in-out;
@@ -445,48 +455,72 @@ nav.navbar a.navbar-brand > img {
     transition: all .3s ease-in-out;
 }
 
-.team-member-overlay {
-    background-color: #434343;
-    border-radius: 12px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
-
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-}
-
-.team-member-overlay:hover {
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5);
-}
-
-.team-member-overlay.hide {
-    display: none;
-}
-
-.team-member-img {
-    display: block;
+#team-pics .col {
+    box-shadow: none !important;
     background-color: transparent;
     margin: auto;
-    width: 100%;
-    height: auto;
+    padding-top: 20px;
 }
 
-.member-info {
-    display: block;
+.team-member-container {
+    position: relative;
+    overflow: hidden;
     cursor: default;
-    padding: 4px;
-    min-height: 60px;
+    border-radius: 8px;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
+    outline: none;
+    border: none;
+
+    -webkit-transition: box-shadow .2s;
+    -moz-transition: box-shadow .2s;
+    -o-transition: box-shadow .2s;
+    transition: box-shadow .2s;
+}
+
+.team-member-container:hover {
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.team-member-container > .member-info-wrapper {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.team-member-container > .member-info-wrapper > .member-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0;
+    height: 0;
+    outline: none;
+    background-color: rgba(135, 208, 213, 0.87);
 
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Chrome/Safari/Opera */
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE/Edge */
     user-select: none;
+
+    -webkit-transition: height, padding .2s;
+    -moz-transition: height, padding .2s;
+    -o-transition: height, padding .2s;
+    transition: height, padding .2s;
+}
+
+.team-member-container.hover > .member-info-wrapper > .member-info,
+.team-member-container.click > .member-info-wrapper > .member-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .member-info > p {
-    margin-bottom: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .member-info > p.member-name {
@@ -504,7 +538,7 @@ nav.navbar a.navbar-brand > img {
 
 @media (min-width: 600px) {
     .member-info {
-        min-height: 60px;
+        /*min-height: 60px;*/
     }
 
     .member-info > p.member-name {
@@ -522,7 +556,7 @@ nav.navbar a.navbar-brand > img {
 
 @media (min-width: 1200px) {
     .member-info {
-        min-height: 68px;
+        /*min-height: 68px;*/
     }
 
     .member-info > p.member-name {
