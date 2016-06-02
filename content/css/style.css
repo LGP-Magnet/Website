@@ -470,7 +470,10 @@ nav.navbar a.navbar-brand > img {
 
 #projects > .container-fluid .row > .project-container:hover > .margin-container {
     color: #434343;
-    border: 10px solid transparent;
+    border-top-width: 4px;
+    border-bottom-width: 4px;
+    border-left-width: 8px;
+    border-right-width: 8px;
     background-color: #87D0D5;
     box-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
 }
