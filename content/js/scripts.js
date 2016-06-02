@@ -37,7 +37,7 @@ var team = [
     ["Raquel_Correia.jpg", "Raquel Correia", "CFO", "Multimedia", "Board Multimedia"],
 
     ["Carolina_Faria.jpg", "Carolina Faria", "CCO", "Design", "Board Design"],
-    ["Guilherme.jpg", "Guilherme", "", "Design", "Design"]
+    ["Guilherme_Barreiros.jpg", "Guilherme Barreiros", "", "Design", "Design"]
 ];
 
 $(document).ready(function () {
